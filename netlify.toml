@@ -1,9 +1,5 @@
-[build]
-  # This tells Netlify to treat this as a functions-only project
-  functions = "functions/"
-
+# netlify.toml
 [[redirects]]
-  # Redirect all incoming requests to the 'server' function
   from = "/*"
-  to = "/.netlify/functions/server"
+  to = "/.netlify/functions/index"
   status = 200
