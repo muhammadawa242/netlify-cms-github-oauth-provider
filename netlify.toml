@@ -1,9 +1,9 @@
-# netlify.toml
-[functions]
-  directory = "/"
-  node_bundler = "esbuild"
+[build]
+  # This tells Netlify to treat this as a functions-only project
+  functions = "functions/"
 
 [[redirects]]
+  # Redirect all incoming requests to the 'server' function
   from = "/*"
-  to = "/.netlify/functions/index"
+  to = "/.netlify/functions/server"
   status = 200
